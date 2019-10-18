@@ -25,7 +25,7 @@ Pod::Spec.new do |spec|
   #   * Write the description between the DESC delimiters below.
   #   * Finally, don't worry about the indent, CocoaPods strips it!
   # spec.description  = "A UIcomponent modeled after a collection view that allows you to display cells with an image and a title."
-  spec.homepage     = "https://someURL/onsomepage.html"
+  spec.homepage     = "https://github.com/ryanbrear/MediaCarousel"
   # spec.screenshots  = "www.example.com/screenshots_1.gif", "www.example.com/screenshots_2.gif"
 
 
@@ -77,7 +77,7 @@ Pod::Spec.new do |spec|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  s.source       = { :path => '.' }
+  s.source       = { :git => "https://github.com/ryanbrear/MediaCarousel", :tag => "1.0.0" }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
