@@ -13,7 +13,8 @@ Pod::Spec.new do |spec|
   spec.platform     = :ios, "12.0"
   spec.source       = { :git => "https://github.com/ryanbrear/MediaCarousel.git", :tag => "1.0.0" }
   # spec.source_files  = "Classes", "Classes/**/*.{h,m}"
-  spec.source_files = "MediaCarousel"
+  spec.source_files = "MediaCarousel/**/*.{h,m,swift}"
+  spec.resources = "MediaCarousel/**/*.{xib,storyboard,xcassets,strings}"
   spec.exclude_files = "Classes/Exclude"
   spec.swift_version = "5.0"
 end
