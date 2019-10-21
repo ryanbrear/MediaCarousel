@@ -11,6 +11,7 @@ import UIKit
 public class MediaCarouselViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     
     public var data: [MediaItem]?
+    public var mediaItemBorderColor: UIColor = UIColor.red
     
     private let collectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
@@ -33,7 +34,7 @@ public class MediaCarouselViewController: UIViewController, UICollectionViewData
     
     public func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if let data = data {
-           return data.count
+            return data.count
         }
         return 0
     }
@@ -43,9 +44,9 @@ public class MediaCarouselViewController: UIViewController, UICollectionViewData
         if let data = data {
             cell.mediaData = data[indexPath.row]
         }
+        cell.layer.borderColor = mediaItemBorderColor.cgColor
         return cell
     }
-    
     
     // MARK: - Collection View Delegate Flow layout methods
     
