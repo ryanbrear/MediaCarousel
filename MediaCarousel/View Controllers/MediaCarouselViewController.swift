@@ -26,8 +26,12 @@ public class MediaCarouselViewController: UIViewController, UICollectionViewData
         addCollectionViewToCarouselVCRootView()
         collectionView.dataSource = self
         collectionView.delegate = self
-        let bundle = Bundle(identifier: "indiegro.MediaCarousel")
-        collectionView.register(UINib(nibName: "MediaCollectionViewCell", bundle: bundle), forCellWithReuseIdentifier: "cell")
+        let podBundle = Bundle(for: MediaCarouselViewController.self)
+        if let urlForResources = podBundle.url(forResource: "MediaCarouselResources", withExtension: "bundle") {
+            if let resourceBundle = Bundle(url: urlForResources) {
+                collectionView.register(UINib(nibName: "MediaCollectionViewCell", bundle: resourceBundle), forCellWithReuseIdentifier: "cell")
+            }
+        }
     }
     
     // MARK: - Collection view data source methods
