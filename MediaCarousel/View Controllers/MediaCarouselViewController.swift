@@ -11,7 +11,7 @@ import UIKit
 public class MediaCarouselViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     
     public var data: [MediaItem]?
-    public var mediaItemBorderColor: UIColor = UIColor.red
+    public var mediaItemBorderColor: UIColor = UIColor.green
     
     private let collectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
